@@ -1,6 +1,6 @@
 const covid19ImpactEstimator = (data) => {
   const { reportedCases, timeToElapse } = data;
-  const numberOfDays = timeToElapse / 3;
+  const numberOfDays = Math.trunc(timeToElapse / 3);
 
   const impact = {
     currentlyInfected: reportedCases * 10,
