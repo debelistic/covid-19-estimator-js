@@ -5,12 +5,12 @@ const covid19ImpactEstimator = (data) => {
   // const { avgDailyIncomeUSD } = data.region;
   let duration;
 
-  if (periodType === 'days') {
-    duration = timeToElapse;
+  if (periodType === 'months') {
+    duration = timeToElapse * 30;
   } else if (periodType === 'weeks') {
     duration = timeToElapse * 7;
-  } else if (periodType === 'months') {
-    duration = timeToElapse * 30;
+  } else {
+    duration = timeToElapse;
   }
   const factor = Math.trunc(duration / 3);
   const estimate = 2 ** factor;
