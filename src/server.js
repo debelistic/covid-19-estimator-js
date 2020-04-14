@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import estimator from './estimator';
+import debug from 'debug';
+// import estimator from './estimator';
 
 const app = express();
 const port = 3000;
@@ -13,7 +14,7 @@ app.use(bodyParser.json());
 
 // finally, let's start our server...
 app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
+  debug.log(`Listening on port ${port}`);
 });
 
 export default app;
