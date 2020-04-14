@@ -8,9 +8,9 @@ const covid19ImpactEstimator = (data) => {
   if (periodType === 'days') {
     duration = Math.trunc(timeToElapse / 3);
   } else if (periodType === 'weeks') {
-    duration = Math.trunc((timeToElapse * 7) / 3);
+    duration = Math.trunc((timeToElapse / 3) * 7);
   } else if (periodType === 'months') {
-    duration = Math.trunc((timeToElapse * 30) / 3);
+    duration = Math.trunc((timeToElapse / 3) / 30);
   }
 
   let dollarRate;
