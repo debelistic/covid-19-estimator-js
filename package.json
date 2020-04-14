@@ -6,7 +6,7 @@
   "private": false,
   "scripts": {
     "lint": "eslint ./src/",
-    "start": "npm run build && node ./dist/server",
+    "start": "node ./dist/server",
     "build": "rm -rf dist && mkdir dist && babel src -s -d dist"
   },
   "dependencies": {
