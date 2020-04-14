@@ -12,7 +12,7 @@ const covid19ImpactEstimator = (data) => {
   } else if (periodType === 'months') {
     duration = timeToElapse * 30;
   }
-  const factor = Math.trunc(duration/3);
+  const factor = Math.trunc(duration / 3);
   const estimate = 2 ** factor;
   let dollarRate;
 
